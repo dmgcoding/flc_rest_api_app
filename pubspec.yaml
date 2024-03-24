@@ -16,6 +16,14 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.18.1
+  prefs_storage:
+    path: packages/prefs_storage
+  api_client:
+    path: packages/api_client
+  auth_repo:
+    path: packages/auth_repo
+  notifications_repo:
+    path: packages/notifications_repo
   
 dev_dependencies:
   bloc_test: ^9.1.6
