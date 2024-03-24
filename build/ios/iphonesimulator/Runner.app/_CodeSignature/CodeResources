@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		6PDuUuTVJTrzzpdUHqDWsOjPq30=
+		SKp4QmK2G3m2u7LfwWSbbQduIZ0=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		k+c5ykIUf/ZsaEcd4srYAIt8y4w=
+		pKRTnPPF7oMJJ3frRP2lt0eCo+4=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		RVHyxL6Ic99DfiqSVeX3DCrMJqM=
+		B8c04DY4+4v7xxchW4dNOtMIkeA=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		2jRcQNUXL1rUYjKw07aLxe9B2Fk=
+		d09eX+XW1CPxyUEzW77GEiSly3M=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>
 		<data>
@@ -180,26 +180,6 @@
 		<data>
 		Ubat0LvE4LUgCwHeyl0Anx2vnzk=
 		</data>
-		<key>Frameworks/shared_preferences_foundation.framework/Info.plist</key>
-		<data>
-		I44bpwzp3n+M72Mn81x3yZjUwMw=
-		</data>
-		<key>Frameworks/shared_preferences_foundation.framework/_CodeSignature/CodeResources</key>
-		<data>
-		hnM/ufJ92euodYYFIuc/AlOh1qo=
-		</data>
-		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation</key>
-		<data>
-		wkEkvReV8Lm82D9059tMTTJ9rZI=
-		</data>
-		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation_privacy.bundle/Info.plist</key>
-		<data>
-		eGtnZH1XlqKywbdJSDqerucq+Eg=
-		</data>
-		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation_privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<data>
-		6uLTlq7fgHHWA8emYDf4ImHC+AY=
-		</data>
 		<key>Info.plist</key>
 		<data>
 		lcj7jL150dd3FIQR1NKPIFrsmXw=
@@ -285,7 +265,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hBefWI/RUkgjYjCPizN/zVWb+Lu0WBXAM9NVPFQf6C4=
+			/4SV0Tfb3jyFX32vP18VYatI+da74pLHzXtjRcakeew=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -299,7 +279,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3nvLjjFLeLLfkVwmPlmslGNzxOdwujRx7/FI7gmQDk8=
+			BTNhD8Ji562YheQtA3pEbtDeT4oi5v3NCMsPRM0/8sk=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
@@ -327,7 +307,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			w4kSODGEPCT1VLvzaTCd2k9uIO8iLXT+7biXDLeIepc=
+			jWfAfWQIKgwLSlJBSg9/mHMYaa0tayok88z0f+JQxog=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -348,7 +328,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9GGGvpPDUziFTKWsFAiWJOaQyqxAaqev8OIT/8U68SI=
+			svJmTqoRezCvI46h+mljst3pZDcyHc7otwB4nzYseK8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/shaders/ink_sparkle.frag</key>
@@ -517,41 +497,6 @@
 			<key>hash2</key>
 			<data>
 			ZepykIMSjfzhwAcmupMrkaqvXkhza1ZE3TdHjl8odaw=
-			</data>
-		</dict>
-		<key>Frameworks/shared_preferences_foundation.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cwutn6je1CvMROtqHZn8woxWON0AQSyb1XiXz7ZaUk4=
-			</data>
-		</dict>
-		<key>Frameworks/shared_preferences_foundation.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			0hxm7QuEdVATsKgB+AixEmD/sWSxi5sfeufBvG4cOqc=
-			</data>
-		</dict>
-		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nUn8jerGdLZxj76XEPOuRkMAtLIcCSpueEtc/WAKiiw=
-			</data>
-		</dict>
-		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation_privacy.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NXuQIlGEv/qPj7kM1XoIe4pEBwaEohCityoWKjhUup4=
-			</data>
-		</dict>
-		<key>Frameworks/shared_preferences_foundation.framework/shared_preferences_foundation_privacy.bundle/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			BWQouTi9VwGKYAGdFcPB7i+nJ/I2h1mLu9k0hIsYCxo=
 			</data>
 		</dict>
 	</dict>

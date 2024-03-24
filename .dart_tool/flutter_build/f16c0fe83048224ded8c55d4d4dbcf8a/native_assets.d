@@ -1,0 +1,1 @@
+ /Users/drexter/WORK/course/course_material/rest_api_integration(rai)/flc_rest_api_app/.dart_tool/flutter_build/f16c0fe83048224ded8c55d4d4dbcf8a/native_assets.yaml: 
