@@ -1,8 +1,10 @@
 // ignore_for_file: unnecessary_lambdas, avoid_dynamic_calls
 
 import 'package:app_ui/app_ui.dart';
-import 'package:flc_rest_api_test/pages/home/views/home.dart';
+import 'package:flc_rest_api_test/pages/login/blocs/login/login_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:formz/formz.dart';
 
 class SigninBtn extends StatelessWidget {
   const SigninBtn({
@@ -11,14 +13,18 @@ class SigninBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PrimaryBtn(
-      text: 'Submit',
-      ontap: () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute<dynamic>(
-            builder: (cxt) => const HomePage(),
-          ),
+    return BlocBuilder<LoginBloc, LoginState>(
+      builder: (context, state) {
+        if (state.status == FormzSubmissionStatus.inProgress) {
+          return const Align(
+            child: CircularProgressIndicator(),
+          );
+        }
+        return PrimaryBtn(
+          text: 'Submit',
+          ontap: () {
+            context.read<LoginBloc>().add(Submit());
+          },
         );
       },
     );

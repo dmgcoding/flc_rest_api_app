@@ -24,6 +24,10 @@ dependencies:
     path: packages/auth_repo
   notifications_repo:
     path: packages/notifications_repo
+  get_it: ^7.6.8
+  shared_preferences: ^2.2.2
+  formz: ^0.7.0
+  equatable: ^2.0.5
   
 dev_dependencies:
   bloc_test: ^9.1.6

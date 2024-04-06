@@ -1,6 +1,11 @@
 // ignore_for_file: always_use_package_imports
 
+import 'package:flc_rest_api_test/locator.dart';
+import 'package:flc_rest_api_test/pages/home/views/home.dart';
+import 'package:flc_rest_api_test/pages/login/blocs/login/login_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:formz/formz.dart';
 
 import 'email_input.dart';
 import 'pwd_input.dart';
@@ -12,7 +17,10 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const _LoginView();
+    return BlocProvider(
+      create: (context) => LoginBloc(lc()),
+      child: const _LoginView(),
+    );
   }
 }
 
@@ -21,24 +29,44 @@ class _LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SizedBox(
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Login',
-              style: TextStyle(fontSize: 22),
-            ),
-            SizedBox(height: 22),
-            EmailInputTextField(),
-            PwdInputTextField(),
-            SizedBox(height: 22),
-            SigninBtn(),
-            SizedBox(height: 22),
-            RegisterText(),
-          ],
+    return BlocListener<LoginBloc, LoginState>(
+      listener: (context, state) {
+        if (state.status == FormzSubmissionStatus.failure) {
+          final snackbar = SnackBar(content: Text(state.error ?? 'Some error'));
+          ScaffoldMessenger.of(context).showSnackBar(snackbar);
+        }
+        if (state.status == FormzSubmissionStatus.success) {
+          const snackbar = SnackBar(
+              content:
+                  Text('Login success. You will be redirected to home page'));
+          ScaffoldMessenger.of(context).showSnackBar(snackbar);
+
+          Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute<dynamic>(builder: (cxt) => const HomePage()),
+            (route) => false,
+          );
+        }
+      },
+      child: const Scaffold(
+        body: SizedBox(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Login',
+                style: TextStyle(fontSize: 22),
+              ),
+              SizedBox(height: 22),
+              EmailInputTextField(),
+              PwdInputTextField(),
+              SizedBox(height: 22),
+              SigninBtn(),
+              SizedBox(height: 22),
+              RegisterText(),
+            ],
+          ),
         ),
       ),
     );

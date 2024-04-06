@@ -1,6 +1,10 @@
 // ignore_for_file: always_use_package_imports
 
+import 'package:flc_rest_api_test/locator.dart';
+import 'package:flc_rest_api_test/pages/register/blocs/register/register_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:formz/formz.dart';
 
 import 'email_input.dart';
 import 'pwd_input.dart';
@@ -12,7 +16,10 @@ class RegisterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const _LoginView();
+    return BlocProvider(
+      create: (context) => RegisterBloc(lc()),
+      child: const _LoginView(),
+    );
   }
 }
 
@@ -21,24 +28,37 @@ class _LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SizedBox(
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Register',
-              style: TextStyle(fontSize: 22),
-            ),
-            SizedBox(height: 22),
-            EmailInputTextField(),
-            PwdInputTextField(),
-            SizedBox(height: 22),
-            SigninBtn(),
-            SizedBox(height: 22),
-            LoginText(),
-          ],
+    return BlocListener<RegisterBloc, RegisterState>(
+      listener: (context, state) {
+        if (state.status == FormzSubmissionStatus.failure) {
+          final snackbar = SnackBar(content: Text(state.error ?? 'Some error'));
+          ScaffoldMessenger.of(context).showSnackBar(snackbar);
+        }
+        if (state.status == FormzSubmissionStatus.success) {
+          const snackbar =
+              SnackBar(content: Text('User created successfuly. Please login'));
+          ScaffoldMessenger.of(context).showSnackBar(snackbar);
+        }
+      },
+      child: const Scaffold(
+        body: SizedBox(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Register',
+                style: TextStyle(fontSize: 22),
+              ),
+              SizedBox(height: 22),
+              EmailInputTextField(),
+              PwdInputTextField(),
+              SizedBox(height: 22),
+              SigninBtn(),
+              SizedBox(height: 22),
+              LoginText(),
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flc_rest_api_test/l10n/l10n.dart';
+import 'package:flc_rest_api_test/pages/register/views/register.dart';
 import 'package:flc_rest_api_test/pages/splash/views/splash.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class _App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: SplashPage(),
+      home: RegisterPage(),
     );
   }
 }
